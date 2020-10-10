@@ -65,3 +65,15 @@
     entry: "\uFFFD"
     language: pygrep
     types: [text]
+-   id: ts-no-debugger
+    name: check for debbuger
+    description: 'Prevent use of `debugger` statement'
+    language: pygrep
+    entry: '\bdebugger\b'
+    types: [ts]
+-   id: ts-no-focus-ignore
+    name: check use of focus and ignore of tests
+    description: 'Forbid use of `fit()`, `xit()`, `fdescribe()` and `xdescribe()` test functions'
+    language: pygrep
+    entry: '\b(?:fit|xit|fdescribe|xdescribe)\s*\('
+    types: [ts]
